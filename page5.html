@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Basic Web Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="myStyle.css">
+    <style>
+    input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class = "hor"><a href="index.html">Home </a></li>
+            <li class = "hor"><a href="page2.html"> Page 2</a> </li>
+            <li class = "hor"><a href="page3.html" >Page 3</a> </li>
+            <li class = "hor"><a href="page4.html">Page 4 </a></li>
+            <li class = "hor"><a href="page5.html"class="current">Page 5 </a></li>
+            </ul>
+            <h1> Interactive form </h1>
+            <form id="myForm">
+            <label for="name"><p>What is your name?</p></label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="math"><p>What math class did you take in high school?</p></label>
+            <input type="text" id="math" name="math"><br><br>
+            <label for="science"><p>What science class did you take in high school?</p></label>
+            <input type="text" id="science" name="science"><br><br>
+            <label for="history"><p>What history class did you take in high school?</p></label>
+            <input type="text" id="history" name="history"><br><br>
+<label for="elective"><p>What was your favorite elective?</p></label>
+  <input type="radio" id="music" name="elective" value="music">
+  <label for="music"><p>Music</p></label>
+  <input type="radio" id="pe" name="elective" value="pe">
+  <label for="pe"><p>PE</p></label>
+  <input type="radio" id="art" name="elective" value="art">
+  <label for="art"><p>Art</p></label>
+<input type="submit" value="Submit">
+        </form>
+  <div id="formContents"></div>
+       <script>
+        
+         var formContents = document.getElementById("formContents");
+         //formContents.innerHTML = "HI";
+        var form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var math = document.getElementById("math").value;
+        var science = document.getElementById("science").value;
+        var history = document.getElementById("history").value;
+        var elective = document.querySelector('input[name="elective"]:checked').value;
+     var formContents = document.getElementById("formContents")
+;    formContents.innerHTML = " "+ name + "took" + math +", "+ science +", " + history + "in highschool. their favorite elective was " +elective+ ".";
+    });
+
+
+		</script> 
+
+
+        
+
+
+
+    </body>
+</html>

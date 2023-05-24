@@ -1,0 +1,48 @@
+    ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            }
+
+            
+
+            li a {
+            display: block;
+            padding: 8px;
+            background-color: #dddddd;
+            }
+            .current{
+                text-decoration: underline;
+                background-color: lightblue;
+            }
+
+h1{ font-size: 350%;
+font-family: 'Oswald', sans-serif;
+color: black;
+text-align: center;}
+h3 {color: black;
+text-align: center;
+font-size: 250%;
+}
+
+p{font-size: 300%;
+color: black;
+text-align: center;
+}
+h2{text-align: center;}
+body {
+  background-color: rgb(139, 172, 243);
+}
+
+.hor{
+    float: left;
+}
+.word {
+  margin: auto;
+  color: white;
+  font: 700 normal 2.5em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
+
+
